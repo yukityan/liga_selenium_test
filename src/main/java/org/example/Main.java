@@ -1,11 +1,13 @@
 package org.example;
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
-    public static void main(String[] args) {//TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
-        System.out.print("second commit");
-        System.out.print("first commit");
+    public static void main(String[] args) {
+
+        Cat firstCat = new  Cat("nut", "white", 3);
+
+        Cat secondCat = new  Cat("timon", "black", 2);
+
+        System.out.println("first cat " + firstCat.getName()+ " " + firstCat.getAge() );
+        System.out.println("second cat " + secondCat.getName()+ " " + secondCat.getAge() );
         }
     }
