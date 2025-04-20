@@ -1,6 +1,7 @@
 package UI;
 
 import base.BaseTest;
+import browser.Browser;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,6 +14,11 @@ public class CheckBoxTest extends BaseTest {
     @BeforeClass
     public void beforeClass(){
         System.out.println("Setting up before class in CheckBoxTest.");
+        checkBoxPage = new CheckBoxPage(driver);
+    }
+    @BeforeClass
+    public void setup(){
+        driver = Browser.createDriver();
         checkBoxPage = new CheckBoxPage(driver);
     }
 

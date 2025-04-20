@@ -16,7 +16,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-    }
+    } //страница должна принимать driver
 
     /**
      * Локатор до названия страницы в средней части страницы
@@ -36,7 +36,7 @@ public class BasePage {
     /**
      * Найти элемент на странице
      * @param locator путь до элемента, тип - By
-     * @return element
+     * @return element найденный элемент
      */
     public WebElement findElement(By locator) {
         WebElement element = driver.findElement(locator);

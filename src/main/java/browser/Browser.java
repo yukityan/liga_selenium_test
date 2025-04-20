@@ -18,11 +18,11 @@ public class Browser {
 
         WebDriver driver;
 
-        switch (BROWSER_TYPE){
+        switch (BROWSER_TYPE){ //создание driver c разными браузерами
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--headless"); //метод, который позволяет не видеть выпололнения теста
                 chromeOptions.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager");
                 driver = new ChromeDriver(chromeOptions);
                 break;
@@ -37,9 +37,9 @@ public class Browser {
                 throw new IllegalArgumentException("Некорректное имя браузера: " + BROWSER_TYPE);
         }
 
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); //размер экрана
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-        return driver;
+        return driver; // возвращаем экземпляр driver
     }
 }
